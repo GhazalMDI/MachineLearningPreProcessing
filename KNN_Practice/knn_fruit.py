@@ -18,7 +18,7 @@ model = KNeighborsClassifier(n_neighbors=2)
 
 model.fit(x_scaler, Y_encoded)
 new_fruit = np.array([[600,22]])
-new_fruit_scaled = scaler(new_fruit)
+new_fruit_scaled = scaler.transform(new_fruit)
 pred = model.predict(new_fruit_scaled)
 print("Predicted fruit:", le.inverse_transform(pred)[0])
 
