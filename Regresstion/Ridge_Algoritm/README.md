@@ -28,32 +28,33 @@ Categorical features like the car brand are converted using One-Hot Encoding so 
 1. **Install required libraries:**
 ```bash
 pip install numpy pandas scikit-learn
-
-Run the Python script:
-
+```
+2.Run the Python script:
 ```bash
 python Car_Price.py
+```
 
 Check the predicted prices for new cars in the console output.
 
-💻 Code Explanation
 
-The dataset is created using a Pandas DataFrame.
+```markdown
+## 💻 Code Explanation
 
-The Brand column is transformed using One-Hot Encoding.
+- The dataset is created using a Pandas DataFrame.
+- The Brand column is transformed using One-Hot Encoding.
+- A Ridge Regression model with alpha=1 is trained on the numeric dataset.
+- You can add new car data in a DataFrame format and predict their prices easily.
 
-A Ridge Regression model with alpha=1 is trained on the numeric dataset.
+## 📊 Sample Output
 
-You can add new car data in a DataFrame format and predict their prices easily.
 
-📊 Sample Output
+
 [26135.42841382 16183.28233088 28720.92929342]
 
 
 This represents the predicted price for the new cars.
 
-⚡ Notes
+## ⚡ Notes
 
-Ridge Regression helps the model handle noisy data better and prevents overfitting.
-
-One-Hot Encoding ensures that categorical variables (like car brand) are treated independently without implying any order.
+- Ridge Regression helps the model handle noisy data better and prevents overfitting.
+- One-Hot Encoding ensures that categorical variables (like car brand) are treated independently 
