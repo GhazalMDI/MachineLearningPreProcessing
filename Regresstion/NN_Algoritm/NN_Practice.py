@@ -2,6 +2,7 @@ import pandas as pd
 
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler,OneHotEncoder
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.neural_network import MLPRegressor
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
@@ -40,3 +41,9 @@ nn_pipline = Pipeline([
 nn_pipline.fit(x_train,y_train)
 y_pred = nn_pipline.predict(x_test)
 print(y_pred)
+
+mae1 = mean_absolute_error(y_test, y_pred)
+mse1 = mean_squared_error(y_test, y_pred)
+r2_1 = r2_score(y_test, y_pred)
+
+print("Model 1 → MAE:", mae1, " | MSE:", mse1, " | R²:", r2_1)
